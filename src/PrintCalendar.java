@@ -8,7 +8,7 @@ public class PrintCalendar {
 		Scanner input = new Scanner(System.in);
 		
 		//获得用户输入的年月数据
-		System.out.print("请输入年月(格式：年.月，如1995.8): ");
+		System.out.print("请输入年月(格式：年.月，如2019.9): ");
 		String yearAndMonth = input.nextLine();
 		//把客户输入的数据分离出年与月，并且转为整数类型
 		int year,month;
@@ -23,7 +23,7 @@ public class PrintCalendar {
 
 	//打印日历的头部部分
 	public static void printMonthTitle(int year, int month) {
-		// TODO Auto-generated method stub
+		//这个方法的效果其实可以通过创建一个数组，然后取数组的值来实现，而不需要创建一个方法
 		String nameOfMonth = getNameOfMonth(month);
 		System.out.printf("\n%13s-%-13d\n",nameOfMonth,year);
 		for(int i=0;i<27;i++) System.out.print('=');
@@ -31,6 +31,7 @@ public class PrintCalendar {
 	}
 	
 	//获得某个月的英文名称
+	//这个方法的效果其实可以通过创建一个数组，然后取数组的值来实现，而不需要创建一个方法
 	public static String getNameOfMonth(int month) {
 		// TODO Auto-generated method stub
 		String nameOfMonth="January";
